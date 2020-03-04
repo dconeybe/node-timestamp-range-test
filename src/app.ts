@@ -12,37 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Create a document in Cloud Firestore with a timestamp with a given "seconds"
- * value.
- *
- * This small application was used to test how the Cloud Firestore
- * (https://cloud.google.com/firestore) handles timestamp values in documents
- * whose seconds fall outside if the valid boundaries.
- *
- * To use this application, issue the following commands:
- *
- * ```
- * npm install
- * tsc
- * node dist/app.ts --seconds=<seconds> --document=<document_path>
- * ```
- *
- * The <seconds> argument is the value for "seconds" to specify to the
- * Timestamp object that will be used as a value in the document. It may be any
- * integer, or one of the following predefined values:
- *   - min (the smallest valid value)
- *   - min-1 (one smaller than min)
- *   - max (the largest valid value)
- *   - max+1 (one larger than max)
- *
- * The <document_path> argument is the path of the document in Cloud Firestore
- * to which to write. Example: "docs/TimestampTest"
- *
- * Use Application Default Credentials (ADC) to specify the project to use
- * (https://cloud.google.com/docs/authentication/production#finding_credentials_automatically).
- */
-
 import { Firestore, Timestamp } from "@google-cloud/firestore";
 import { argv } from "yargs";
 
