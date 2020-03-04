@@ -8,6 +8,10 @@ This small application was used to test how the Cloud Firestore
 (https://cloud.google.com/firestore) handles timestamp values in documents
 whose seconds fall outside if the valid boundaries.
 
+This application was created to determine if and how the Cloud Firestore backend
+handles invalid timestamps while working on
+https://github.com/googleapis/nodejs-firestore/pull/947.
+
 ## Setup
 
 To prepare to use this application, issue the following commands:
